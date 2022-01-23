@@ -3,6 +3,7 @@ package com.itacademy.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.itacademy.myapplication.fragments.first_fragment
 
 class MainActivity : AppCompatActivity() {
 
