@@ -7,93 +7,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold|italic"
-        android:layout_margin="20dp"
-        android:layout_gravity="center"
-        android:text="Профиль"
-        android:textSize="50dp"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/avatarch"/>
-
-    <LinearLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Имя:"/>
-
-        <EditText
-            android:id="@+id/firstName"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Введите имя"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Возраст:"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="Введите возраст"
-            android:inputType="number"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Дата рождения:"/>
-
-        <EditText
-            android:id="@+id/BirthDate"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="Введите дату раждения"
-            android:inputType="date"/>
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/saveBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="center"
-        android:text="Сохранить"
-        android:textAllCaps="false"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
 
