@@ -15,7 +15,7 @@ import com.itacademy.myapplication.models.Model
 
 class first_fragment : Fragment(){
     lateinit var recyclerView: RecyclerView
-    lateinit var btnAdd : FloatingActionButton
+    lateinit var Add : FloatingActionButton
     lateinit var adapter: File_adapter
 
     private var isEdit: Boolean = true
@@ -25,6 +25,7 @@ class first_fragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_first_fragment, container,false)
+
         recyclerView = view.findViewById(R.id.recycler_view)
 
         adapter = File_adapter(Constant.app, object: EditDeleteListener{
@@ -39,8 +40,8 @@ class first_fragment : Fragment(){
             }
         })
         recyclerView.adapter = adapter
-        btnAdd = view.findViewById(R.id.btn_add)
-        btnAdd.setOnClickListener {
+        Add = view.findViewById(R.id.btn_add)
+        Add.setOnClickListener {
             isEdit = false
             showEditFragment(null,null,0)
         }

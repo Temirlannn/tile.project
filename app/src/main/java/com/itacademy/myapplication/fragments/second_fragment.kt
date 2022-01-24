@@ -14,6 +14,10 @@ import com.itacademy.myapplication.models.Model
 class second_fragment(
     val title: String?,
     val content: String?,
+    val content2: String?,
+    val content3: String?,
+    val content4: String?,
+    val content5: String?,
     val eventListener: EventAddListener
 ) : BottomSheetDialogFragment() {
 
@@ -28,6 +32,10 @@ class second_fragment(
 
     lateinit var titleEt: EditText
     lateinit var contentEt: EditText
+    lateinit var contentEt2: EditText
+    lateinit var contentEt3: EditText
+    lateinit var contentEt4: EditText
+    lateinit var contentEt5: EditText
     lateinit var saveBtn: Button
 
 

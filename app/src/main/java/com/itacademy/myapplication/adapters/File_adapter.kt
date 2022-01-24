@@ -18,8 +18,8 @@ class File_adapter(
 
     class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
 
-        val tv_event = item.findViewById<TextView>(R.id.description_short)
-        val event_tv = item.findViewById<TextView>(R.id.description_detail)
+        val mama = item.findViewById<TextView>(R.id.description_short)
+        val nana = item.findViewById<TextView>(R.id.description_detail)
 
         val btnEditor = item.findViewById<ImageButton>(R.id.btn_editor)
         val btnDelete = item.findViewById<ImageButton>(R.id.btn_delete)
@@ -34,8 +34,8 @@ class File_adapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = array[position]
 
-        holder.tv_event.text = item.title
-        holder.event_tv.text = item.content
+        holder.mama.text = item.title
+        holder.nana.text = item.content
 
     }
 
@@ -43,7 +43,7 @@ class File_adapter(
         return array.size
     }
 }
-
+////////////////////////////////////////////////////
 interface EditDeleteListener{
     fun editClicked(editEvent : Model, position: Int)
     fun deleteCliced(editEvent : Model, position: Int)
