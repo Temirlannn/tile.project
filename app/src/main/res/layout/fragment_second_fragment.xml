@@ -22,8 +22,7 @@
             android:hint="Имя"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:textSize="25dp"
-            android:textStyle="bold|italic" />
+            android:textSize="25dp"/>
 
         <EditText
             android:id="@+id/detail_description"
@@ -52,37 +51,7 @@
             android:textColorHint="#FFFFFF"
             android:textSize="25dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/start_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:hint="Дата начала "
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/end_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:hint="Дата окончания "
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="20dp" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,23 +61,23 @@
 
             <Button
                 android:id="@+id/btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:backgroundTint="#00AEFF"
-                android:text="Сохранить"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00AEFF"
                 android:text="Назад"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00AEFF"
+                android:text="Сохранить"
                 android:textColor="#000000"
                 android:textStyle="bold" />
         </LinearLayout>

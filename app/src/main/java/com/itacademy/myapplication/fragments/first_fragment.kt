@@ -14,6 +14,7 @@ import com.itacademy.myapplication.adapters.File_adapter
 import com.itacademy.myapplication.models.Model
 
 class first_fragment : Fragment(){
+
     lateinit var recyclerView: RecyclerView
     lateinit var Add : FloatingActionButton
     lateinit var adapter: File_adapter
@@ -31,9 +32,11 @@ class first_fragment : Fragment(){
         adapter = File_adapter(Constant.app, object: EditDeleteListener{
             override fun editClicked(editEvent: Model, position: Int) {
                 isEdit = true
-                showEditFragment(editEvent.title, editEvent.content, editEvent.content2, editEvent.content3, editEvent.content4, editEvent.content5, position )
+                showEditFragment(
+                    editEvent.title, editEvent.content, editEvent.content2, editEvent.content3,
+                    position
+                )
             }
-
             override fun deleteCliced(editEvent: Model, position: Int) {
                 Constant.app.remove(editEvent)
                 adapter.notifyDataSetChanged()
@@ -43,12 +46,18 @@ class first_fragment : Fragment(){
         Add = view.findViewById(R.id.btn_add)
         Add.setOnClickListener {
             isEdit = false
-            showEditFragment(null,null, null,null,null,null,0)
+            showEditFragment(null,null, null,null,0)
         }
         return view
     }
-    private fun showEditFragment(title: String?, content : String?, content2: String?, content3: String?, content4: String?, content5: String?, position: Int){
-        second_fragment(title,content, content2,content3,content4,content5, object : EventAddListener{
+    private fun showEditFragment(title: String?, content : String?, content2: String?,
+                                 content3: String?, position: Int){
+        second_fragment(
+            title,
+            content,
+            content2,
+            content3,
+            object : EventAddListener{
             override fun onEventAdded(newEvent: Model) {
                 if (isEdit){
                     Constant.app[position] = newEvent

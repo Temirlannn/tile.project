@@ -17,8 +17,7 @@ class second_fragment(
     val content: String?,
     val content2: String?,
     val content3: String?,
-    val content4: String?,
-    val content5: String?,
+
     val eventListener: EventAddListener
 ) : BottomSheetDialogFragment() {
 
@@ -35,8 +34,7 @@ class second_fragment(
     lateinit var contentEt: EditText
     lateinit var contentEt2: EditText
     lateinit var contentEt3: EditText
-    lateinit var contentEt4: TextView
-    lateinit var contentEt5: TextView
+
 
     lateinit var saveBtn: Button
     lateinit var baclbtn: Button
@@ -52,16 +50,14 @@ class second_fragment(
         contentEt = view.findViewById(R.id.detail_description)
         contentEt2 = view.findViewById(R.id.detailed_description_editText)
         contentEt3 = view.findViewById(R.id.user_editText)
-        contentEt4 = view.findViewById(R.id.start_event)
-        contentEt5 = view.findViewById(R.id.end_event)
+
 
 
         titleEt.setText(title)
         contentEt.setText(content)
         contentEt2.setText(content2)
         contentEt3.setText(content3)
-        contentEt4.setText(content4)
-        contentEt5.setText(content5)
+
 
         saveBtn = view.findViewById(R.id.btn)
         baclbtn = view.findViewById(R.id.back)
@@ -73,10 +69,9 @@ class second_fragment(
             val content = contentEt.text.toString()
             val content2 = contentEt2.text.toString()
             val content3 = contentEt3.text.toString()
-            val content4 = contentEt4.text.toString()
-            val content5 = contentEt5.text.toString()
 
-            val newEvent = Model(title,content,content2,content3,content4,content5)
+
+            val newEvent = Model(title,content,content2,content3,)
 
             eventListener.onEventAdded(newEvent)
             dismiss()
